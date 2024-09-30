@@ -1,0 +1,36 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "StfTodesursacheCodeCS",
+  "id": "StfTodesursacheCodeCS",
+  "title": "STF Weitere Todesursachen",
+  "description": "TBD",
+  "version": "0.1.0",
+  "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfTodesursacheCodeCS",
+  "concept": [
+    {
+      "code": "TU2",
+      "display": "Todesursache 2",
+      "definition": "Als Folge von..."
+    },
+    {
+      "code": "TU3",
+      "display": "Todesursache 3",
+      "definition": "Als Folge von... (Grundleiden)"
+    },
+    {
+      "code": "TU4",
+      "display": "Todesursache_4"
+    },
+    {
+      "code": "TU5",
+      "display": "Todesursache_5"
+    },
+    {
+      "code": "GA",
+      "display": "Todesursache Gesundheitsamt"
+    }
+  ],
+  "count": 5
+}

@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "StfFacharztgruppeCS",
+  "id": "StfFacharztgruppeCS",
+  "title": "STF Facharztgruppe",
+  "version": "0.1.0",
+  "url": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS",
+  "concept": [
+    {
+      "code": "Hausarzt",
+      "display": "Hausarzt/-ärztin"
+    },
+    {
+      "code": "Notarzt",
+      "display": "Notarzt/-ärztin"
+    },
+    {
+      "code": "Notdienstarzt",
+      "display": "Arzt/Ärztin des kassenärztlichen Notdienstes"
+    },
+    {
+      "code": "Krankenhausarzt",
+      "display": "diensthabender Arzt/Ärztin im Krankenhaus"
+    },
+    {
+      "code": "Rechtsmediziner",
+      "display": "Rechtsmediziner/-in"
+    },
+    {
+      "code": "Sonstiges",
+      "display": "Sonstiges"
+    }
+  ],
+  "count": 6
+}

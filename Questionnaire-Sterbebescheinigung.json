@@ -1,0 +1,866 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "Sterbebescheinigung",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "JaNeinKeineAngabeVS",
+      "status": "draft",
+      "name": "JaNeinKeineAngabeVS",
+      "title": "Ja-Nein-Keine Angabe ValueSet",
+      "version": "0.1.0",
+      "url": "https://www.oegd.de/fhir/seu/ValueSet/JaNeinKeineAngabeVS",
+      "expansion": {
+        "timestamp": "2024-06-24T12:00:00+00:00",
+        "contains": [
+          {
+            "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS",
+            "code": "yes",
+            "display": "Ja"
+          },
+          {
+            "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS",
+            "code": "no",
+            "display": "Nein"
+          },
+          {
+            "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS",
+            "code": "x",
+            "display": "Keine Angabe"
+          }
+        ]
+      },
+      "compose": {
+        "include": [
+          {
+            "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS"
+          }
+        ]
+      }
+    }
+  ],
+  "url": "https://www.oegd.de/fhir/Questionnaire/Sterbebescheinigung",
+  "title": "elektronische Sterbebescheinigung (eSB) Maximaldatensatz",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext",
+      "extension": [
+        {
+          "url": "name",
+          "valueId": "patient"
+        },
+        {
+          "url": "type",
+          "valueCode": "Patient"
+        },
+        {
+          "url": "descripton",
+          "valueString": "Patientenkontext"
+        }
+      ]
+    }
+  ],
+  "status": "draft",
+  "item": [
+    {
+      "linkId": "ausstellender Arzt_Einrichtung Obduktionsschein",
+      "type": "group",
+      "text": "(ausstellender Arzt_Einrichtung Obduktionsschein) Ausstellender Arzt:in oder Einrichtung Obduktionsschein",
+      "item": [
+        {
+          "linkId": "ausstellender_Arzt",
+          "type": "group",
+          "text": "(ausstellender_Arzt) Ausstellender Arzt:in",
+          "item": [
+            {
+              "linkId": "Obduktion_Arzt_ID",
+              "type": "string",
+              "text": "(Obduktion_Arzt_ID) ID des Arztes der Obduktion laut Arztliste der Ärztekammer",
+              "code": [
+                {
+                  "code": "Obduktion_Arzt_ID",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Titel",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Titel) Titel des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Titel",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Vorname",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Vorname) Vorname des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Vorname",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Nachname",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Nachname) Nachname des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Nachname",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Institution",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Institution) Institution des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Institution",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Strasse_Hausnr",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Strasse_Hausnr) Hausnummer und Straße des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Strasse_Hausnr",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_PLZ",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_PLZ) PLZ des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_PLZ",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Ort",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Ort) Ort des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Ort",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Obduktionsschein_Ausstell_Arzt_Telefon",
+              "type": "string",
+              "text": "(Obduktionsschein_Ausstell_Arzt_Telefon) Telefon des Arztes",
+              "code": [
+                {
+                  "code": "Obduktionsschein_Ausstell_Arzt_Telefon",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "ausstellende_Einrichtung",
+          "type": "group",
+          "text": "(ausstellende_Einrichtung) Ausstellende Einrichtung",
+          "item": [
+            {
+              "linkId": "Ausstell_Arzt_ID",
+              "type": "string",
+              "text": "(Ausstell_Arzt_ID) ID des Ausstellenden Arztes laut Arztliste der Ärztekammer",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_ID",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_LANR",
+              "type": "string",
+              "text": "(Ausstell_Arzt_LANR) Die Lebenslange Arztnummer (LANR) des ausstellenden Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_LANR",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Zulassungsnummer",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Zulassungsnummer) Gleich LANR?",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Zulassungsnummer",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Titel",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Titel) Titel des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Titel",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Vorname",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Vorname) Vorname des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Vorname",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Nachname",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Nachname) Nachname des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Nachname",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Institution",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Institution) Institution des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Institution",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Klinik",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Klinik) Klinik",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Klinik",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Praxis",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Praxis) Praxis",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Praxis",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Abteilung",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Abteilung) Abteilung/Fachrichtung",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Abteilung",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Strasse_Hausnr",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Strasse_Hausnr) Hausnummer und Straße des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Strasse_Hausnr",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Zusatz",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Zusatz) Zusatz",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Zusatz",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Land",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Land) Herkunftsland für Anschrift. Bei unbekanntem Land kann der Wert X verwendet werden",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Land",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_PLZ",
+              "type": "string",
+              "text": "(Ausstell_Arzt_PLZ) PLZ des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_PLZ",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Ort",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Ort) Ort des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Ort",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Telefon",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Telefon) Telefon des Arztes",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Telefon",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Ausstell_Arzt_Postfach",
+              "type": "string",
+              "text": "(Ausstell_Arzt_Postfach) Postfach",
+              "code": [
+                {
+                  "code": "Ausstell_Arzt_Postfach",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Facharztgruppe",
+              "type": "string",
+              "text": "(Facharztgruppe) ärztliche Dienstgruppe",
+              "code": [
+                {
+                  "code": "Facharztgruppe",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Berufsgruppe",
+              "type": "string",
+              "text": "(Berufsgruppe) Einsatzbereich",
+              "code": [
+                {
+                  "code": "Berufsgruppe",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Autopsie",
+      "type": "group",
+      "text": "(Autopsie) Autopsie",
+      "item": [
+        {
+          "linkId": "Autopsie_beantragt",
+          "type": "string",
+          "text": "(Autopsie_beantragt) Autopsie beantragt?",
+          "code": [
+            {
+              "code": "Autopsie_beantragt",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Autopsie_beantragt_Verantwortlicher",
+          "type": "string",
+          "text": "(Autopsie_beantragt_Verantwortlicher) Bei wem wurde die Autopsie beantragt?",
+          "code": [
+            {
+              "code": "Autopsie_beantragt_Verantwortlicher",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Autopsie_Ort",
+          "type": "string",
+          "text": "(Autopsie_Ort) Ort der Durchführung",
+          "code": [
+            {
+              "code": "Autopsie_Ort",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Path_Institut",
+          "type": "string",
+          "text": "(Path_Institut) Name Pathologisches Institut",
+          "code": [
+            {
+              "code": "Path_Institut",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Gerichtsmed_Institut",
+          "type": "string",
+          "text": "(Gerichtsmed_Institut) Name Gerichtsmedizinisches Institut",
+          "code": [
+            {
+              "code": "Gerichtsmed_Institut",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Bestattung",
+      "type": "group",
+      "text": "(Bestattung) Bestattung",
+      "item": [
+        {
+          "linkId": "Bestattung",
+          "type": "string",
+          "text": "(Bestattung) Bestattungsart",
+          "code": [
+            {
+              "code": "Bestattung",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Melder",
+      "type": "group",
+      "text": "(Melder) Melder",
+      "item": [
+        {
+          "linkId": "Melder_ID",
+          "type": "string",
+          "text": "(Melder_ID) Melder ID der meldenden Stelle",
+          "code": [
+            {
+              "code": "Melder_ID",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Melder_Prüfcode",
+          "type": "string",
+          "text": "(Melder_Prüfcode) Prüfcode der meldenden Stelle",
+          "code": [
+            {
+              "code": "Melder_Prüfcode",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Ansprechpartner",
+          "type": "string",
+          "text": "(Ansprechpartner) Ansprechpartner bei der meldenden Stelle",
+          "code": [
+            {
+              "code": "Ansprechpartner",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Quellsystem",
+          "type": "group",
+          "text": "(Quellsystem) Angaben zum Quellsystem, aus dem die Daten stammen",
+          "item": [
+            {
+              "linkId": "Quellsystem_Name",
+              "type": "string",
+              "text": "(Quellsystem_Name) Name",
+              "code": [
+                {
+                  "code": "Quellsystem_Name",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            },
+            {
+              "linkId": "Quellsystem_Version",
+              "type": "string",
+              "text": "(Quellsystem_Version) Version",
+              "code": [
+                {
+                  "code": "Quellsystem_Version",
+                  "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "linkId": "Melder_ReferenzNr",
+          "type": "string",
+          "text": "(Melder_ReferenzNr) ReferenzNr (der Meldung des StaLa)",
+          "code": [
+            {
+              "code": "Melder_ReferenzNr",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Metadaten",
+      "type": "group",
+      "text": "(Metadaten) Metadaten",
+      "item": [
+        {
+          "linkId": "Exportzeitpunkt",
+          "type": "string",
+          "text": "(Exportzeitpunkt) optional mit Uhrzeit",
+          "code": [
+            {
+              "code": "Exportzeitpunkt",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Obduktionsschein",
+      "type": "group",
+      "text": "(Obduktionsschein) Obduktionsschein",
+      "item": [
+        {
+          "linkId": "Obduktionsschein_liegt_bei",
+          "type": "string",
+          "text": "(Obduktionsschein_liegt_bei) Liegt der Obduktionsbericht bei?",
+          "code": [
+            {
+              "code": "Obduktionsschein_liegt_bei",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Obduktion_durchgeführt",
+          "type": "string",
+          "text": "(Obduktion_durchgeführt) Obduktion durchgeführt?",
+          "code": [
+            {
+              "code": "Obduktion_durchgeführt",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Obduktionsschein_Uhrzeit",
+          "type": "time",
+          "text": "(Obduktionsschein_Uhrzeit) Uhrzeit der Obduktion",
+          "code": [
+            {
+              "code": "Obduktionsschein_Uhrzeit",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Obduktionsschein_Ort",
+          "type": "string",
+          "text": "(Obduktionsschein_Ort) Ort der Obduktion",
+          "code": [
+            {
+              "code": "Obduktionsschein_Ort",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "linkId": "Risiken",
+      "type": "group",
+      "text": "(Risiken) Risiken",
+      "item": [
+        {
+          "linkId": "Infektionskrankheit_kürzlich",
+          "type": "choice",
+          "text": "(Infektionskrankheit_kürzlich) Lag eine Infektionskrankheut in den letzten 3 Monaten vor",
+          "code": [
+            {
+              "code": "Infektionskrankheit_kürzlich",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS"
+        },
+        {
+          "linkId": "Radioakt_Therapie_kürzlich",
+          "type": "choice",
+          "text": "(Radioakt_Therapie_kürzlich) Gab es eine Behandlung mit radioaktiven Isotopen in den letzten 3 Monaten",
+          "code": [
+            {
+              "code": "Radioakt_Therapie_kürzlich",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS"
+        },
+        {
+          "linkId": "Berufskrankheit_vorhanden",
+          "type": "choice",
+          "text": "(Berufskrankheit_vorhanden) Liegt eine Berufskrankheit vor",
+          "code": [
+            {
+              "code": "Berufskrankheit_vorhanden",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS"
+        },
+        {
+          "linkId": "Berufskrankheit",
+          "type": "string",
+          "text": "(Berufskrankheit) Angabe der Berufskrankheit",
+          "code": [
+            {
+              "code": "Berufskrankheit",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "enableWhen": [
+            {
+              "question": "Berufskrankheit",
+              "operator": "=",
+              "answerCoding": {
+                "code": "yes",
+                "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Krebserkrankung_vorhanden",
+          "type": "choice",
+          "text": "(Krebserkrankung_vorhanden) Liegt eine Krebserkrankung vor",
+          "code": [
+            {
+              "code": "Krebserkrankung_vorhanden",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS"
+        },
+        {
+          "linkId": "Anzahl_Lebendgeboren",
+          "type": "integer",
+          "text": "(Anzahl_Lebendgeboren) Anzahl der Lebendgeborenen",
+          "code": [
+            {
+              "code": "Anzahl_Lebendgeboren",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Angabe_Totgeboren",
+          "type": "string",
+          "text": "(Angabe_Totgeboren) Zusatzangaben für Totgeborene",
+          "code": [
+            {
+              "code": "Angabe_Totgeboren",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Gewicht_Totgeboren",
+          "type": "integer",
+          "text": "(Gewicht_Totgeboren) Gewicht der Leibesfrucht bei Totgeburt",
+          "code": [
+            {
+              "code": "Gewicht_Totgeboren",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+              "valueCoding": {
+                "code": "g",
+                "system": "http://unitsofmeasure.org",
+                "display": "Gramm"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "medizinische_Massnahme",
+          "type": "choice",
+          "text": "(medizinische_Massnahme) Medizinische Maßnahme/Opera-tion innerhalb der letzten 4 Wo-chen vor dem Tod?",
+          "code": [
+            {
+              "code": "medizinische_Massnahme",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS"
+        },
+        {
+          "linkId": "medizinische_Massnahme_Grund",
+          "type": "string",
+          "text": "(medizinische_Massnahme_Grund) Grund der medizinischen Maß-nahme/Operation",
+          "code": [
+            {
+              "code": "medizinische_Massnahme_Grund",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "medizinische_Massnahme_Art",
+          "type": "string",
+          "text": "(medizinische_Massnahme_Art) Art der medizinischen Maß-nahme/Operation",
+          "code": [
+            {
+              "code": "medizinische_Massnahme_Art",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Schwangerschaft",
+          "type": "choice",
+          "text": "(Schwangerschaft) Schwangerschaft?",
+          "code": [
+            {
+              "code": "Schwangerschaft",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS"
+        },
+        {
+          "linkId": "Schwangerschaft_Monat",
+          "type": "string",
+          "text": "(Schwangerschaft_Monat) Schwangerschaftsmonat (Bedingt an das Feld Schwangerschaft)",
+          "code": [
+            {
+              "code": "Schwangerschaft_Monat",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ]
+        },
+        {
+          "linkId": "Schwangerschaft_Entbindung_kürzlich",
+          "type": "choice",
+          "text": "(Schwangerschaft_Entbindung_kürzlich) Erfolgte in den letzten 3 Monaten eine Entbindung",
+          "code": [
+            {
+              "code": "Schwangerschaft_Entbindung_kürzlich",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS",
+          "enableWhen": [
+            {
+              "question": "Schwangerschaft_Entbindung_kürzlich",
+              "operator": "=",
+              "answerCoding": {
+                "code": "yes",
+                "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Schwangerschaft_Abort_kürzlich",
+          "type": "choice",
+          "text": "(Schwangerschaft_Abort_kürzlich) Erfolgte in den letzten 3 Monaten ein Abort",
+          "code": [
+            {
+              "code": "Schwangerschaft_Abort_kürzlich",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS",
+          "enableWhen": [
+            {
+              "question": "Schwangerschaft_Abort_kürzlich",
+              "operator": "=",
+              "answerCoding": {
+                "code": "yes",
+                "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Schwangerschaft_Interuptio_kürzlich",
+          "type": "choice",
+          "text": "(Schwangerschaft_Interuptio_kürzlich) Erfolgte in den letzten 3 Monaten eine Interruptio",
+          "code": [
+            {
+              "code": "Schwangerschaft_Interuptio_kürzlich",
+              "system": "https://www.oegd.de/fhir/seu/CodeSystem/Fragen"
+            }
+          ],
+          "answerValueSet": "#JaNeinKeineAngabeVS",
+          "enableWhen": [
+            {
+              "question": "Schwangerschaft_Interuptio_kürzlich",
+              "operator": "=",
+              "answerCoding": {
+                "code": "yes",
+                "system": "https://www.oegd.de/fhir/seu/CodeSystem/JaNeinKeineAngabeCS"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

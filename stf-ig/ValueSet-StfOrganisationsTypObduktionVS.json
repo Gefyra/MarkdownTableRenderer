@@ -1,0 +1,24 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "StfOrganisationsTypObduktion",
+  "id": "StfOrganisationsTypObduktionVS",
+  "title": "STF Typ einer Organisation bei Obduktionn",
+  "version": "0.1.0",
+  "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfOrganisationsTypObduktionVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfOrganisationsTypCS",
+        "concept": [
+          {
+            "code": "PathInst"
+          },
+          {
+            "code": "GerichtsmedInst"
+          }
+        ]
+      }
+    ]
+  }
+}

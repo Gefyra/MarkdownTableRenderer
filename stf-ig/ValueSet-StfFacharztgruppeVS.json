@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "StfFacharztgruppe",
+  "id": "StfFacharztgruppeVS",
+  "title": "STF Facharztgruppe",
+  "version": "0.1.0",
+  "url": "http://gematik.de/fhir/oegd/stf/ValueSet/StfFacharztgruppeVS",
+  "compose": {
+    "include": [
+      {
+        "system": "http://gematik.de/fhir/oegd/stf/CodeSystem/StfFacharztgruppeCS"
+      }
+    ]
+  }
+}
