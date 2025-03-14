@@ -6,18 +6,26 @@ The `QuestionnaireProcessor` class provides methods to load a FHIR Questionnaire
 
 ## Usage
 
+### Building the Project
+
+To build the project and generate a runnable JAR with all dependencies, use the following Maven command:
+
+```sh
+mvn clean package
+```
+
 ### Running the Processor
 
 To run the `QuestionnaireProcessor`, you need to provide the path to the FHIR Questionnaire file as a command-line argument.
 
 ```sh
-java -cp target/<your-jar-file>.jar questionnairerenderer.QuestionnaireProcessor <path_to_questionnaire_file>
+java -cp target/<your-jar-file-with-dependencies>.jar questionnairerenderer.QuestionnaireProcessor <path_to_questionnaire_file>
 ```
 
 ### Example
 
 ```sh
-java -cp target/questionnaire-processor-1.0-SNAPSHOT.jar questionnairerenderer.QuestionnaireProcessor /path/to/questionnaire.json
+java -cp target/QuestionnaireMarkdownTableRenderer-1.0-SNAPSHOT-jar-with-dependencies.jar questionnairerenderer.QuestionnaireProcessor SEU-Elternbefragung-BW.json
 ```
 
 ### Output
