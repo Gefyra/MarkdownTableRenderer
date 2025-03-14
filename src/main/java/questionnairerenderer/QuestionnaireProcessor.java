@@ -126,8 +126,6 @@ public class QuestionnaireProcessor {
         answerString = IntegerType.class.cast(answer).getValue().toString();
       } else if (answer instanceof DateType) {
         answerString = DateType.class.cast(answer).getValue().toString();
-      } else if (answer instanceof DateType) {
-        answerString = DateType.class.cast(answer).getValue().toString();
       } else if (answer instanceof DateTimeType) {
         answerString = DateTimeType.class.cast(answer).getValue().toString();
       } else if (answer instanceof TimeType) {
